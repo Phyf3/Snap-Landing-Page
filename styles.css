@@ -1,0 +1,114 @@
+*{margin:0; padding:0}
+:root {
+    --primary-black : hsl(0, 0%, 8%);
+    --grey : hsl(0, 0%, 41%);
+    --almost-white: hsl(0, 0%, 98%);
+}
+body {
+    font:18px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding:.5rem;
+}
+.header_logo img{
+    width: 5rem;
+    height: 1.875rem;
+}
+.header_properties,.header_register {
+    display: none;
+}
+.header_menu img {
+    width: 2rem;
+    height: 1.1875rem;
+}
+.hero {
+    width: 100vw;
+}
+.hero img {
+    width:100vw;
+}
+.main_info {
+    display: grid;
+    place-items: center;
+    margin-top:2rem;
+}
+
+.main_info h1 {
+    font-size: 1.5rem;
+    color: var(--primary-black);
+}
+.main_info p {
+    text-align: center;
+    color: var(--grey);
+    margin-top:.5rem;
+    padding:.5rem;
+}
+.main_info button {
+    background-color: var(--primary-black);
+    color: var(--almost-white);
+    border: 0px solid;
+    border-radius: .6rem;;
+    padding: .625rem .9375rem;
+    margin-top:.5rem;
+}
+.main--logos {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;;
+    margin-bottom: 3rem;;
+}
+.main--logos img {
+    width: 2.875rem;
+    height: .95rem;
+    padding:.5rem;
+}
+
+.sidebar {
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    background: white;
+    position: fixed;
+    top:0;
+    height:100vh;
+    width:100%;
+    /* padding:1rem; */
+    /* border:1px solid red; */
+}
+.sidebar__details {
+    margin-top:3rem;
+    text-align: center;
+    /* border: 1px solid blue;; */
+    display: grid;
+    place-items: center;;
+}
+.sidebar__details ul {
+    list-style-type: none;
+}
+.sidebar__details>ul>li {
+    padding-top:1.2rem;
+}
+.sidebar__close {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: flex-end;    
+    height: 1.0625rem;
+    padding: 1rem;;
+}
+.sidebar__close img {
+    width: 1.0625rem;
+}
+
+.show {
+    display: block;
+}
+.hidden {
+    display: none;
+}
+
+.nested__list {
+    text-align: right;
+}
+

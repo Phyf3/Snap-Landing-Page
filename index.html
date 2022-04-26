@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header >
+    <div class="header_logo">
+      <img src="./images/logo.svg" alt="logo">
+    </div>
+
+    <div class="header_menu">
+      <img id = "menu_open"src="./images/icon-menu.svg" alt="logo">
+    </div>
+
+    <div class="header_properties">
+      Features
+      Company
+      Careers
+      About
+    </div>
+
+    <div class="header_register">
+      Login
+      Register
+    </div>
+  </header>
+
+  <section id="sidebar" class="sidebar_container hidden">
+    <div class="sidebar">
+      <div  class="sidebar__close">
+        <img id = "menu_close" src="./images/icon-close-menu.svg" alt="">
+      </div>
+
+      <div class="sidebar__details">
+        <ul>
+          <li>
+            Features
+            <img 
+              class="dummy"
+              id = "open_features" 
+              src="./images/icon-arrow-down.svg" alt=""
+            >
+            <img 
+              id = "close_features"
+              class="dummy hidden"
+              src="./images/icon-arrow-up.svg" alt=""
+            >
+
+            <ul id="feature_list" class="nested__list hidden">
+              <li>
+                <img src="./images/icon-todo.svg" alt="">
+                Todo list
+              </li>
+
+              <li>
+                <img src="./images/icon-calendar.svg" alt="">
+                Calender
+              </li>
+
+              <li>
+                <img src="./images/icon-reminders.svg" alt="" srcset="">
+                Reminders
+              </li>
+              
+              <li>
+                <img src="./images/icon-planning.svg" alt="" srcset="">
+                Planning
+              </li>
+            </ul>
+          </li>
+            
+          <li>Company
+            <img 
+              class="dummy"
+              id = "open_company" 
+              src="./images/icon-arrow-down.svg" alt=""
+            >
+            <img 
+              id = "close_company"
+              class="dummy hidden"
+              src="./images/icon-arrow-up.svg" alt=""
+            >
+            <ul id="company_list" class="nested__list hidden">
+              <li>History</li>
+              <li>Our Team</li>
+              <li>Blog</li>
+            </ul>
+          </li>
+          <li>Careers</li>
+          <li>About</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="hero">
+      <img src="./images/image-hero-mobile.png" alt="hero image">
+    </section>
+
+    
+    <section >
+      <div class="main_info">
+        <h1>Make remote work</h1>
+
+        <p>Get your team in sync, no matter your location. Streamline processes, 
+          create team rituals, and watch productivity soar.
+        </p>
+
+        <button>Learn more</button>
+      </div>
+
+      <div class="main--logos">
+        <img src="./images/client-databiz.svg" alt="databiz">
+        <img src="./images/client-audiophile.svg" alt="audiophile">
+        <img src="./images/client-meet.svg" alt="meets">
+        <img src="./images/client-maker.svg" alt="maker">
+      </div>
+    </section>  
+  </main>
+
+  
+
+  
+
+  
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  <script src="./script.js" defer></script>
+</body>
+</html>
