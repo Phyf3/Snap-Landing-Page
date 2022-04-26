@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
 *{margin:0; padding:0}
 :root {
     --primary-black : hsl(0, 0%, 8%);
@@ -6,11 +7,12 @@
 }
 body {
     font:18px;
+    font-family: 'Epilogue', sans-serif;
 }
 header {
     display: flex;
     justify-content: space-between;
-    padding:.5rem;
+    padding:1rem;
 }
 .header_logo img{
     width: 5rem;
@@ -24,34 +26,44 @@ header {
     height: 1.1875rem;
 }
 .hero {
+    margin:1.5rem 0;
     width: 100vw;
 }
-.hero img {
+.hero--mobile {
     width:100vw;
+}
+.hero--desktop {
+    display: none;
 }
 .main_info {
     display: grid;
     place-items: center;
     margin-top:2rem;
+    padding:0 .5rem;
 }
 
 .main_info h1 {
-    font-size: 1.5rem;
+    font-size: 2.3rem;
+    font-weight: 700;
     color: var(--primary-black);
 }
 .main_info p {
     text-align: center;
+    font-size: 1rem;
+    line-height: 1.5rem;
     color: var(--grey);
     margin-top:.5rem;
-    padding:.5rem;
+    font-weight: 500;
 }
 .main_info button {
     background-color: var(--primary-black);
     color: var(--almost-white);
     border: 0px solid;
     border-radius: .6rem;;
-    padding: .625rem .9375rem;
-    margin-top:.5rem;
+    padding: .8125rem 1.125rem;
+    margin-top:2rem;
+    font-weight: 700;
+    font-size: 1.1rem;;
 }
 .main--logos {
     display: flex;
@@ -60,8 +72,8 @@ header {
     margin-bottom: 3rem;;
 }
 .main--logos img {
-    width: 2.875rem;
-    height: .95rem;
+    width: 4.375rem;
+    height: 1.55rem;
     padding:.5rem;
 }
 
@@ -78,7 +90,7 @@ header {
     /* border:1px solid red; */
 }
 .sidebar__details {
-    margin-top:3rem;
+    margin-top:30%;
     text-align: center;
     /* border: 1px solid blue;; */
     display: grid;
@@ -87,9 +99,7 @@ header {
 .sidebar__details ul {
     list-style-type: none;
 }
-.sidebar__details>ul>li {
-    padding-top:1.2rem;
-}
+
 .sidebar__close {
     /* border: 1px solid black; */
     display: flex;
@@ -108,7 +118,145 @@ header {
     display: none;
 }
 
+.sidebar__details--list {
+    margin: auto 0;
+}
+.sidebar__details--list>li {
+    font-size: 2.2rem;;
+    padding-top:1.2rem;
+}
 .nested__list {
-    text-align: right;
+    align-items: right;
+    margin-left:3rem;
+    margin-top:.5rem;
+}
+.nested__list li {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    font-size: 1rem;;
+    padding:.4rem 0;
+}
+.nested__list img {
+    padding-right: .5rem;
+}
+.arrow {
+    transform: scale(1.5);
 }
 
+
+
+@media screen and (min-width: 768px) {
+    header {
+        padding:2rem;
+    }
+    .header_logo img {
+        width:7.5rem;
+        height:2.875rem;
+    }
+    .header_menu img {
+        width:4rem;
+        height:2.1875rem;
+    }
+    .main_info h1 {
+        margin-top:2rem;
+        font-size: 6rem;
+
+    }
+    .main_info p {
+        font-size: 1.855rem;
+        line-height: 3.5rem;
+        margin-top:2rem;
+        padding: 0 3rem;
+    }
+    .main_info button { 
+        font-size: 2.5rem;
+        padding:1.125rem 1.85rem;
+        margin-top:3rem;
+    }
+    .main--logos {
+        margin-top:6rem;
+    }
+    .main--logos img {
+        width: 9.375rem;
+        height: 2.8125rem;
+    }
+    .sidebar__details--list>li {
+        font-size: 4.2rem;;
+    }
+    .nested__list li {
+        font-size: 2.5rem;
+    }
+    .nested__list li {
+        padding:.8rem 0;
+    }
+    .nested__list img {
+        transform: scale(2);
+    }
+    .arrow {
+        transform: scale(2.8);
+    }
+    .sidebar__close {
+        padding:4rem;
+    }
+    .sidebar__close img {
+        transform: scale(3);
+    }
+    .sidebar__details--list>li {
+        padding-top: 3rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    main {
+        display: flex;
+        justify-content: space-between;
+    }
+    .hero--mobile {
+        display: none;
+    }
+    .hero--desktop {
+        display: block;
+        width:30vw;
+    }
+    .hero {
+        display: grid;
+        place-items: center;
+        order:2;
+        border:1px solid red;
+    }
+    .main_info {
+        width:40vw;
+        display: grid;
+        place-items: left;
+        order: 1;
+        border:1px solid blue;
+    }
+    .main_info h1 {
+        margin-top:2rem;
+        font-size: 4rem;
+
+    }
+    .main_info p {
+        font-size: 1rem;
+        line-height: 1.5625rem;
+        width:30vw;
+        text-align: left;
+        margin-top:2rem;
+        padding: 0 3rem;
+    }
+    .main_info button {
+        padding: .8125rem 1.125rem;
+        margin-top:2rem;
+        font-size: 1.1rem;;
+    }
+    .main--logos img {
+        width: 4.375rem;
+        height: 1.55rem;
+        padding:.5rem;
+    }
+    .header_menu img {
+        width: 2rem;
+        height: 1.1875rem;
+    }
+}

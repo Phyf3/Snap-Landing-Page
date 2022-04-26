@@ -43,21 +43,21 @@
   <section id="sidebar" class="sidebar_container hidden">
     <div class="sidebar">
       <div  class="sidebar__close">
-        <img id = "menu_close" src="./images/icon-close-menu.svg" alt="">
+        <img id = "menu_close"  src="./images/icon-close-menu.svg" alt="">
       </div>
 
       <div class="sidebar__details">
-        <ul>
+        <ul class="sidebar__details--list">
           <li>
             Features
             <img 
-              class="dummy"
+              class="arrow"
               id = "open_features" 
               src="./images/icon-arrow-down.svg" alt=""
             >
             <img 
               id = "close_features"
-              class="dummy hidden"
+              class="arrow hidden"
               src="./images/icon-arrow-up.svg" alt=""
             >
 
@@ -86,13 +86,13 @@
             
           <li>Company
             <img 
-              class="dummy"
+              class="arrow"
               id = "open_company" 
               src="./images/icon-arrow-down.svg" alt=""
             >
             <img 
               id = "close_company"
-              class="dummy hidden"
+              class="arrow hidden"
               src="./images/icon-arrow-up.svg" alt=""
             >
             <ul id="company_list" class="nested__list hidden">
@@ -110,7 +110,8 @@
 
   <main>
     <section class="hero">
-      <img src="./images/image-hero-mobile.png" alt="hero image">
+      <img class="hero--mobile" src="./images/image-hero-mobile.png" alt="hero image">
+      <img class="hero--desktop" src="./images/image-hero-desktop.png" alt="">
     </section>
 
     
