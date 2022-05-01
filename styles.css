@@ -6,15 +6,20 @@
     --almost-white: hsl(0, 0%, 98%);
 }
 body {
-    font:18px;
+    background-image: url(./images/stucco-1920x1080.png);
+    /* font:18px; */
     font-family: 'Epilogue', sans-serif;
+    overflow-y: hidden;
+}
+ul li {
+    cursor: pointer;
 }
 header {
     display: flex;
     justify-content: space-between;
     padding:1rem;
 }
-.header_logo img{
+.header_logo--img img{
     width: 5rem;
     height: 1.875rem;
 }
@@ -41,11 +46,14 @@ header {
     margin-top:2rem;
     padding:0 .5rem;
 }
-
-.main_info h1 {
+.main_info_title--lg {
+    display: none;
+}
+.main_info_title--sm {
+    display: block;
     font-size: 2.3rem;
     font-weight: 700;
-    color: var(--primary-black);
+    /* color: var(--primary-black); */
 }
 .main_info p {
     text-align: center;
@@ -81,11 +89,12 @@ header {
     /* display: none; */
     display: flex;
     flex-direction: column;
-    background: white;
+    background-image: url(./images/stucco-1920x1080.png);
     position: fixed;
     top:0;
     height:100vh;
     width:100%;
+    z-index: 6;
     /* padding:1rem; */
     /* border:1px solid red; */
 }
@@ -150,7 +159,7 @@ header {
     header {
         padding:2rem;
     }
-    .header_logo img {
+    .header_logo--img img {
         width:7.5rem;
         height:2.875rem;
     }
@@ -158,7 +167,7 @@ header {
         width:4rem;
         height:2.1875rem;
     }
-    .main_info h1 {
+    .main_info_title--sm {
         margin-top:2rem;
         font-size: 6rem;
 
@@ -208,55 +217,183 @@ header {
 }
 
 @media screen and (min-width: 1024px) {
-    main {
+    .header {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+    }
+    .header_properties {
+        display: flex;
+        margin-left:2rem;
+        /* outline: 2px solid blue; */
+
+    }
+    .header_properties--list, .header_register ul {
+        display: flex;
+        list-style-type: none;
+    }
+    .header_properties--list li {
+        padding-left:1rem;
+    }
+    .header_logo--img img{
+        width: 5rem;
+        height: 1.875rem;
+    }
+    .header_menu {
+        display: none;
+    }
+    .header_register {
+        color: var(--grey);
+        display: flex;
+        align-items: center;
+        /* outline: 2px solid blue; */
+
+    }
+    .header_register ul li {
+        padding-right:1rem;
+        font-size: 1rem;
+        cursor:pointer;
+    }
+    .header_register ul li:nth-child(2) {
+        color:var(--grey);
+        padding:.5rem 1rem;
+        font-size: 1rem;
+        border-radius: 1rem;;
+        border: 2px solid var(--grey);
+    
+        cursor:pointer;
+    }
+
+    .header_register ul li:hover {
+        color:var(--primary-black);
+    }
+    .header_register ul li:nth-child(2):hover {
+        border: 2px solid var(--grey);
+        color:var(--primary-black)
+    }
+
+    .header_nested__list {
+        position: absolute;
+        list-style-type: none;
+        background-color: var(--almost-white);
+        font-size: .9rem;
+        border-radius: .5rem;;
+        padding:.5rem;
+        margin-top:.5rem;
+        -webkit-box-shadow: -1px 15px 69px -19px rgba(0,0,0,0.75);
+        -moz-box-shadow: -1px 15px 69px -19px rgba(0,0,0,0.75);
+        box-shadow: -1px 15px 69px -19px rgba(0,0,0,0.75);
+    }
+    
+    .nested_left {
+        position: absolute;
+        left:6rem;
+        z-index: 2;
+    }
+    .header_nested__list li {
+        padding-top:.5rem;
+    }
+
+    main {
+        display: flex;
+        padding:0rem 6rem;
+        justify-content: space-between;
+        /* outline: 2px solid purple; */
+        height: 100vh;
+    }
+    .hero {
+        display: grid;
+        place-items: center;
+        order:2;
+        /* border:2px solid hsl(0, 0%, 41%); */
+        position: relative;
+        bottom:9rem;
+        height:100%;
     }
     .hero--mobile {
         display: none;
     }
     .hero--desktop {
         display: block;
-        width:30vw;
+        width:40vw;
+        transform: scale(.75);
+        /* outline: 2px solid blue; */
     }
-    .hero {
-        display: grid;
-        place-items: center;
-        order:2;
-        border:1px solid red;
+   
+    main>section:nth-child(2) {
+        /* outline: 2px solid green; */
+        position: relative;
+        margin-bottom: 0rem;
     }
     .main_info {
         width:40vw;
         display: grid;
         place-items: left;
         order: 1;
-        border:1px solid blue;
+        z-index: 1;
+        margin-top: 0rem;
+        /* border:1px solid blue; */
     }
-    .main_info h1 {
-        margin-top:2rem;
+    .main_info_title--sm {
+        display: none;
+    }
+    .main_info_title--lg {
+        display: block;
         font-size: 4rem;
-
     }
     .main_info p {
         font-size: 1rem;
         line-height: 1.5625rem;
         width:30vw;
         text-align: left;
-        margin-top:2rem;
+        margin-top:1rem;
         padding: 0 3rem;
+        position: relative;
+        right:4rem;
     }
     .main_info button {
-        padding: .8125rem 1.125rem;
+        padding: .7125rem 1.125rem;
         margin-top:2rem;
         font-size: 1.1rem;;
+        position: relative;
+        right:4rem;
+        cursor: pointer;
+    }
+    .main_info button:hover {
+        background-color: var(--almost-white);
+        border:2px solid var(--primary-black);
+        color: black;
     }
     .main--logos img {
-        width: 4.375rem;
-        height: 1.55rem;
-        padding:.5rem;
+        width: 3.4rem;
+        height: 1.2rem;
+        padding:1.5rem;
     }
     .header_menu img {
         width: 2rem;
         height: 1.1875rem;
     }
-}
+    .main--logos {
+        /* outline:1px solid red;  */
+        margin-top: 3rem;
+        margin-right:3rem;
+        margin-bottom: 0rem;
+    }
+
+    .main_info_title--lg {
+        width: 100%;
+        height: 25vh;
+        position: relative;
+        overflow: hidden;
+        /* outline:2px solid blue; */
+    }
+    .main_info_title--lg span{
+          position: absolute;
+          font-size: 3rem;
+          line-height: 4.2rem;
+    }
+    .main_info_title--lg span:nth-child(2) {
+        top:3.5rem;
+    }
+} 
+
